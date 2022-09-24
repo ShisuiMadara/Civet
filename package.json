@@ -1,0 +1,32 @@
+{
+  "name": "civet",
+  "version": "1.0.0",
+  "description": "CLI based encrypted chatting application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShisuiMadara/Civet.git"
+  },
+  "author": "qascade and  ShisuiMadara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShisuiMadara/Civet/issues"
+  },
+  "homepage": "https://github.com/ShisuiMadara/Civet#readme",
+  "dependencies": {
+    "socket.io": "^4.5.2",
+    "socket.io-client": "^4.5.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.38.0",
+    "eslint": "^8.24.0",
+    "eslint-config-standard-with-typescript": "^23.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.3.0",
+    "eslint-plugin-promise": "^6.0.1",
+    "typescript": "^4.8.3"
+  }
+}
