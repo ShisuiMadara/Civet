@@ -1,16 +1,18 @@
 const http = require('http').createServer()
 const io = require('socket.io')(http)
-const port = 3000
+module.exports = { main }
 
-http.listen(port, () => console.log(`server listening on port: ${port}`))
+function main (port) {
+  http.listen(port, () => console.log(`server listening on port: ${port}`))
 
-io.on('connection', (socket) => {
-  console.log('connected')
-  socket.on('message', (data) => {
-    socket.broadcast.emit('message', data)
+  io.on('connection', (socket) => {
+    console.log('connected')
+    socket.on('message', (data) => {
+      socket.broadcast.emit('message', data)
+    })
   })
-})
 
-io.on('disconnect', (evt) => {
-  console.log('disconnected')
-})
+  io.on('disconnect', (evt) => {
+    console.log('disconnected')
+  })
+}
